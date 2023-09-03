@@ -33,7 +33,7 @@
             placeNumberLabel = new Label();
             placeNameValue = new TextBox();
             placeNameLabel = new Label();
-            priceAmountValue = new TextBox();
+            prizeAmountValue = new TextBox();
             priceAmountLabel = new Label();
             prizePercentageValue = new TextBox();
             pricePercentageLabel = new Label();
@@ -81,12 +81,13 @@
             placeNameLabel.TabIndex = 19;
             placeNameLabel.Text = "Place name:";
             // 
-            // priceAmountValue
+            // prizeAmountValue
             // 
-            priceAmountValue.Location = new Point(160, 132);
-            priceAmountValue.Name = "priceAmountValue";
-            priceAmountValue.Size = new Size(159, 33);
-            priceAmountValue.TabIndex = 22;
+            prizeAmountValue.Location = new Point(160, 132);
+            prizeAmountValue.Name = "prizeAmountValue";
+            prizeAmountValue.Size = new Size(159, 33);
+            prizeAmountValue.TabIndex = 22;
+            prizeAmountValue.Text = "0";
             // 
             // priceAmountLabel
             // 
@@ -103,6 +104,7 @@
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(159, 33);
             prizePercentageValue.TabIndex = 24;
+            prizePercentageValue.Text = "0";
             // 
             // pricePercentageLabel
             // 
@@ -121,6 +123,7 @@
             createPrizeButton.TabIndex = 27;
             createPrizeButton.Text = "Create prize";
             createPrizeButton.UseVisualStyleBackColor = true;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
@@ -130,7 +133,7 @@
             Controls.Add(createPrizeButton);
             Controls.Add(prizePercentageValue);
             Controls.Add(pricePercentageLabel);
-            Controls.Add(priceAmountValue);
+            Controls.Add(prizeAmountValue);
             Controls.Add(priceAmountLabel);
             Controls.Add(placeNameValue);
             Controls.Add(placeNameLabel);
@@ -138,7 +141,7 @@
             Controls.Add(placeNumberLabel);
             Controls.Add(createPrizeLabel);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(5, 5, 5, 5);
+            Margin = new Padding(5);
             Name = "CreatePrizeForm";
             Text = "Create Prize";
             ResumeLayout(false);
@@ -152,7 +155,7 @@
         private Label placeNumberLabel;
         private TextBox placeNameValue;
         private Label placeNameLabel;
-        private TextBox priceAmountValue;
+        private TextBox prizeAmountValue;
         private Label priceAmountLabel;
         private TextBox prizePercentageValue;
         private Label pricePercentageLabel;
