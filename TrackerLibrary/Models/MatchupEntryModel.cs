@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace TrackerLibrary
+namespace TrackerLibrary.Models
 {
     public class MatchupEntryModel
     {
@@ -28,6 +28,6 @@ namespace TrackerLibrary
         public MatchupModel ParentMatchup { get; set; }
 
 
-        
+
     }
 }
