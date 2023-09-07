@@ -12,7 +12,7 @@ namespace TrackerLibrary.DataAccess
     {
         
         private const string PrizesFile = "PrizeModels.csv";
-        private const string PersonsFile = "PersonModels.csv";
+        private const string PeopleFile = "PersonModels.csv";
 
         public PrizeModel CreatePrize(PrizeModel model)
         {
@@ -48,20 +48,20 @@ namespace TrackerLibrary.DataAccess
 
         public PersonModel CreatePerson(PersonModel model)
         {
-            List<PersonModel> persons = PersonsFile.FullFilePath().LoadFile().ConvertToPersonModels();
+            List<PersonModel> people = PeopleFile.FullFilePath().LoadFile().ConvertToPersonModels();
 
             int currentId = 1;
 
-            if (persons.Count > 0)
+            if (people.Count > 0)
             {
-                currentId = persons.OrderByDescending(x => x.Id).First().Id + 1;
+                currentId = people.OrderByDescending(x => x.Id).First().Id + 1;
             }
 
             model.Id = currentId;
 
-            persons.Add(model);
+            people.Add(model);
 
-            persons.SaveToPersonFile(PersonsFile);
+            people.SaveToPeopleFile(PeopleFile);
 
             return model;
         }

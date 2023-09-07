@@ -85,7 +85,7 @@ namespace TrackerLibrary.DataAccess.TextHelpers
             return output;
         }
 
-        public static void SaveToPersonFile(this List<PersonModel> models, string fileName)
+        public static void SaveToPeopleFile(this List<PersonModel> models, string fileName)
         {
             List<string> lines = new List<string>();
             foreach (PersonModel p in models)
