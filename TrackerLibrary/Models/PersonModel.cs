@@ -48,6 +48,14 @@ namespace TrackerLibrary.Models
             CellphoneNumber = cellphoneNumber;
         }
 
-    }
+        public string FullName
+        {
+            get 
+            { 
+                return $"{ FirstName } { LastName }"; 
+            }
 
+
+        }
+    }
 }
